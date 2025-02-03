@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,html{
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.background-video {
+    position: fixed; /* Fixa o vídeo na tela */
+    top: 0;
+    left: 0;
+    width: 100%; /* O vídeo vai ocupar toda a largura da tela */
+    height: 100%; /* O vídeo vai ocupar toda a altura da tela */
+    object-fit: cover; /* Faz o vídeo cobrir toda a tela sem distorcer */
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo da página */
+}
+
+/* Estilo para o conteúdo da página (pode adicionar qualquer coisa que quiser) */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;}
+
+    li{
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    a:hover{
+        color: rgb(0, 217, 255);
+    }
+
+    header{
+        position: relative;
+        padding: 0.2rem;
+    }
+
+    .navbar{
+        width: 100%;
+        height: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .navbar .logo{
+        width: 20%;
+        height: auto;
+    }
+
+    .navbar .links{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .navbar .toggle_btn{
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: none;
+    }
+
+    .action_btn{
+       background-color:rgb(0, 217, 255); 
+       color: white;
+       padding: 0.5rem 1rem;
+       border: none;
+       outline: none;
+       border-radius: 20px;
+       font-size: 0.8rem;
+       font-weight: bold;
+       cursor: pointer;
+       transition: scale 0.2 ease;
+    }
+
+    .action_btn:hover{
+        scale: 1.05;
+        color: white;
+    }
+
+    .action_btn:active{
+        scale: 0.95;
+    }
+
+    @media (max-width:992px){
+        .navbar .links,
+        .navbar .action_btn{
+            display: none;
+        }
+
+        .navbar .toggle_btn{
+            display: block;
+        }
+
+        .dropdown-menu{
+            display: block;
+        }
+    }
+
+    /* From Uiverse.io by e-coders */ 
+button {
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+    margin-left: 40%;
+    margin-top: 10%;
+    display: flex;
+    
+}   
+   button:disabled {
+    pointer-events: none;
+   }
+   
+   button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+   }
+   
+   button:active {
+    box-shadow: none;
+    transform: translateY(0);
+   }
+  /* From Uiverse.io by mi-series */ 
+.container {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background: #FCEDDA;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container header {
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .container .form {
+    margin-top: 15px;
+  }
+  
+  .form .input-box {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .input-box label {
+    color: #000;
+  }
+  
+  .form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 35px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #808080;
+    margin-top: 5px;
+    border: 1px solid #EE4E34;
+    border-radius: 6px;
+    padding: 0 15px;
+    background: #FCEDDA;
+  }
+  
+  .input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .form .column {
+    display: flex;
+    column-gap: 15px;
+  }
+  
+  .form .gender-box {
+    margin-top: 10px;
+  }
+  
+  .form :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .form .gender {
+    column-gap: 5px;
+  }
+  
+  .gender input {
+    accent-color: #EE4E34;
+  }
+  
+  .form :where(.gender input, .gender label) {
+    cursor: pointer;
+  }
+  
+  .gender label {
+    color: #000;
+  }
+  
+  .address :where(input, .select-box) {
+    margin-top: 10px;
+  }
+  
+  .select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #808080;
+    font-size: 1rem;
+    background: #FCEDDA;
+  }
+  
+  .form .submit {
+    height: 40px;
+    width: 100%;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #EE4E34;
+  }
+  
+  .form button:hover {
+    background: #EE3E34;
+  }
