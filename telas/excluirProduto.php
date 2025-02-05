@@ -5,23 +5,46 @@
     use PHP\Modelo\dao\excluir;
     use PHP\Modelo\dao\conexao;
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+<!doctype HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro Produto</title>
+        <link rel="stylesheet" href="../css/estilo.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form method="POST">
-        <label>Código:</label>
-        <input type="text" name="tCodigo">
 
-        <button type="submit">Excluir
+<header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../img/senac_logo.png" alt="">
+                </div>
+
+            <ul class="links">
+            <li><a href="hero">INÍCIO</a></li>
+                <li><a href="hero">PESAGEM</a></li>
+                <li><a href="hero">CONTATO</a></li>
+                </ul>
+            <a href="#" class="action_btn">Cadastro</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>         
+            </div>
+    </header>
+    <section class="container">
+ <header>Cadastrar Produto</header>
+  <form class="form" method="POST" >
+    <div class="input-box">
+          <label>Digite o codigo do produto:</label>
+          <input type="text" class="form-control" id="tCodigo" name="tCodigo" placeholder="99999999999">
+
+          </div>
+
+        <button type="submit" class="btnn">Enviar</button>
+        </form>
         <?php
             $conexao = new conexao();
             if(isset($_POST['tCodigo'])){
@@ -29,8 +52,7 @@
                 $excluir = new  Excluir();
                 }
         ?>
-        </button>
-        </form>
+       
         <?php
            
            if(isset($_POST['tCodigo'])){
@@ -41,7 +63,11 @@
            }
         ?>
     
-    </button>
-    </form>
+</section>
+
+    
+<video class="background-video" autoplay loop muted>
+        <source src="../img/menu.mp4" type="video/mp4">
+    </video>
 </body>
 </html>

@@ -6,7 +6,8 @@
     class Excluir{
         function excluirProduto(
             conexao $conexao,
-            int $cpf)
+            int $codigo)
+            
         {
             $conn = $conexao->conectar();
             $sql = "delete from produto where codigo = '$codigo'";

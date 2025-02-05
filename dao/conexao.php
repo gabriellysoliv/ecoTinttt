@@ -7,7 +7,6 @@ class conexao{
         try{
         $conn = mysqli_connect('localhost', 'root', '', 'ecoTint');
         if($conn){
-            echo "<br>Conectado com sucesso!";
             return $conn;
         }
         echo "<br>Algo deu errado!";

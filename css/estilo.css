@@ -25,7 +25,7 @@ body,html{
 .content {
     position: relative;
     z-index: 1;
-    color: white;
+    color: #d7d7d7;
     text-align: center;
     padding: 20px;}
 
@@ -35,9 +35,10 @@ body,html{
 
     a{
         text-decoration: none;
-        color: white;
+        color: #d7d7d7;
         font-size: 1rem;
         font-family: 'Poppins', sans-serif;
+        justify-content: center;
     }
 
     a:hover{
@@ -46,7 +47,6 @@ body,html{
 
     header{
         position: relative;
-        padding: 0.2rem;
     }
 
     .navbar{
@@ -58,6 +58,7 @@ body,html{
         justify-content: space-between;
         align-items: center;
         margin-top: 20px;
+      
     }
 
     .navbar .logo{
@@ -114,151 +115,151 @@ body,html{
         }
     }
 
-    /* From Uiverse.io by e-coders */ 
-button {
-    appearance: none;
-    background-color: transparent;
-    border: 0.125em solid #1A1A1A;
-    border-radius: 0.9375em;
-    box-sizing: border-box;
-    color: #3B3B3B;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    min-height: 3.75em;
-    min-width: 0;
-    outline: none;
-    padding: 1em 2.3em;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    will-change: transform;
-    margin-left: 40%;
-    margin-top: 10%;
-    display: flex;
-    
-}   
-   button:disabled {
-    pointer-events: none;
-   }
-   
-   button:hover {
-    color: #fff;
-    background-color: #1A1A1A;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-   }
-   
-   button:active {
-    box-shadow: none;
-    transform: translateY(0);
-   }
+    .button-container {
+      display: flex; /* Organiza os botões em linha */
+      gap: 1em; /* Espaçamento entre os botões */
+      justify-content: center; /* Centraliza os botões */
+      margin-top: 2em; /* Espaço acima do container */
+  }
+  
+  /* Estilo dos botões */
+  button {
+      appearance: none;
+      background-color: transparent;
+      border: 0.125em solid #1A1A1A;
+      border-radius: 0.9375em;
+      box-sizing: border-box;
+      color: #3B3B3B;
+      cursor: pointer;
+      display: inline-block;
+      font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      font-size: 16px;
+      font-weight: 600;
+      line-height: normal;
+      margin: 0;
+      min-height: 3.75em;
+      padding: 1em 2.3em;
+      text-align: center;
+      text-decoration: none;
+      transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      will-change: transform;
+  }
+  
+  /* Efeito de hover nos botões */
+  button:hover {
+      background-color: #1f1f1f;
+      transform: scale(1.05); /* Leve aumento do botão */
+  }
+  
+  /* Efeito ao clicar nos botões */
+  button:active {
+      background-color: #ffffff;
+  }
   /* From Uiverse.io by mi-series */ 
-.container {
+  .container {
     position: relative;
     max-width: 500px;
     width: 100%;
-    background: #FCEDDA;
+    background: #E6F7FF; /* Azul claro */
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .container header {
+    margin-left: 38%;
+    margin-top: 5%;
+}
+
+.container header {
     font-size: 1.2rem;
-    color: #000;
+    color: #004F73; /* Azul escuro */
     font-weight: 600;
     text-align: center;
-  }
-  
-  .container .form {
+}
+
+.container .form {
     margin-top: 15px;
-  }
-  
-  .form .input-box {
+}
+
+.form .input-box {
     width: 100%;
     margin-top: 10px;
-  }
-  
-  .input-box label {
-    color: #000;
-  }
-  
-  .form :where(.input-box input, .select-box) {
+}
+
+.input-box label {
+    color: #004F73; /* Azul escuro */
+}
+
+.form :where(.input-box input, .select-box) {
     position: relative;
     height: 35px;
     width: 100%;
     outline: none;
     font-size: 1rem;
-    color: #808080;
+    color: #6B8EAA; /* Azul suave */
     margin-top: 5px;
-    border: 1px solid #EE4E34;
+    border: 1px solid #A8C8E8; /* Azul claro para a borda */
     border-radius: 6px;
     padding: 0 15px;
-    background: #FCEDDA;
-  }
-  
-  .input-box input:focus {
+    background: #EAF7FF; /* Azul muito claro */
+}
+
+.input-box input:focus {
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  }
-  
-  .form .column {
+    border-color: #6BB9F0; /* Azul médio ao focar */
+}
+
+.form .column {
     display: flex;
     column-gap: 15px;
-  }
-  
-  .form .gender-box {
+}
+
+.form .gender-box {
     margin-top: 10px;
-  }
-  
-  .form :where(.gender-option, .gender) {
+}
+
+.form :where(.gender-option, .gender) {
     display: flex;
     align-items: center;
     column-gap: 50px;
     flex-wrap: wrap;
-  }
-  
-  .form .gender {
+}
+
+.form .gender {
     column-gap: 5px;
-  }
-  
-  .gender input {
-    accent-color: #EE4E34;
-  }
-  
-  .form :where(.gender input, .gender label) {
+}
+
+.gender input {
+    accent-color: #A8C8E8; /* Azul claro para as opções de gênero */
+}
+
+.form :where(.gender input, .gender label) {
     cursor: pointer;
-  }
-  
-  .gender label {
-    color: #000;
-  }
-  
-  .address :where(input, .select-box) {
+}
+
+.gender label {
+    color: #004F73; /* Azul escuro */
+}
+
+.address :where(input, .select-box) {
     margin-top: 10px;
-  }
-  
-  .select-box select {
+}
+
+.select-box select {
     height: 100%;
     width: 100%;
     outline: none;
     border: none;
-    color: #808080;
+    color: #6B8EAA; /* Azul suave */
     font-size: 1rem;
-    background: #FCEDDA;
-  }
-  
-  .form .submit {
+    background: #EAF7FF; /* Azul muito claro */
+}
+
+.form .submit {
     height: 40px;
     width: 100%;
-    color: #000;
+    color: #fff;
     font-size: 1rem;
     font-weight: 400;
     margin-top: 15px;
@@ -266,9 +267,27 @@ button {
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s ease;
-    background: #EE4E34;
+    background: #5CA4D7; /* Azul médio */
+}
+
+.form .submit:hover {
+    background: #4B8AC4; /* Azul escuro ao passar o mouse */
+}
+
+.btnn {
+    padding: 12px 24px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+    margin-left: 40%;
+    margin-top: 10px;
+
   }
   
-  .form button:hover {
-    background: #EE3E34;
+  .btnn:hover {
+    background-color: darkblue;
   }

@@ -8,30 +8,54 @@
 ?>
  
  
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultar Produto</title>
-    <link rel="stylesheet" href="Style.css">
+ <!doctype HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro Produto</title>
+        <link rel="stylesheet" href="../css/estilo.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-<form method="POST" class="form">
+
+<header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../img/senac_logo.png" alt="">
+                </div>
+
+            <ul class="links">
+            <li><a href="hero">INÍCIO</a></li>
+                <li><a href="hero">PESAGEM</a></li>
+                <li><a href="hero">CONTATO</a></li>
+                </ul>
+            <a href="#" class="action_btn">Cadastro</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>         
+            </div>
+    </header>
+
+
+
+      <section class="container">
+    <header>Consultar Produto</header>
+    <form method="POST" class="form">
   <div class="title">Consultar Produto<br><span>Informe o código</span></div>
-  <input class="input" name="tCodigo" placeholder="tCodigo" type="text" >
- 
- 
+  <input class="input" name="tCodigo" placeholder="Codigo" type="text" >
+        
   </div>
-  <button type="submit" class="button-confirm">Consultar →
+
+  <button type="submit" class="btnn">Enviar</button>
+  </form>
       <?php
         $conexao = new Conexao();
         $codigo = $_POST['tCodigo'];
         $consultar = new Consultar();
       ?>
-  </button>
-</form>
+
 <?php
     if(isset($_POST['tCodigo'])){
         echo $consultar->consultarProdutoIndividual($conexao,$codigo);
@@ -40,7 +64,15 @@
         echo "Preencha o campo código";
     }
 
-?>
+?> 
+
+
+
+</section>
+
+<video class="background-video" autoplay loop muted>
+        <source src="../img/menu.mp4" type="video/mp4">
+    </video>
 </body>
 </html>
  
